@@ -1,0 +1,18 @@
+suite_id: f1cdadab-a44c-407d-921c-3049f53c861d
+suite_name: Пример общего кейса
+description: Это пример общего кейса, который можно переиспользовать в разных test suite
+created_at: "2025-12-11T13:41:32Z"
+status: new
+created_by: ivankuzin
+test_cases:
+  - case_id: 885bdd9e-e9e2-47d6-824f-efe0c5ff3f3d
+    title: Авторизация пользователя
+    description: Общий кейс для авторизации пользователя в системе
+    priority: high
+    steps:
+      - action: Открыть страницу входа
+        expected_result: Страница входа отображается
+      - action: Ввести логин и пароль
+        expected_result: Данные введены в поля формы
+      - action: Нажать кнопку "Войти"
+        expected_result: Пользователь успешно авторизован

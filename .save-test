@@ -1,0 +1,278 @@
+{
+  "version": "1.0",
+  "testsDirectory": "tests",
+  "templates": {
+    "Test Suite Template": {
+      "prefix": "test-suite",
+      "body": [
+        "suite_id: ${1:uuid}",
+        "suite_name: ${2:Название test suite}",
+        "description: ${3:Описание}",
+        "created_at: ${4:2024-01-01T00:00:00Z}",
+        "status: ${5|new,in progress,done,archived|}",
+        "created_by: ${6:author}",
+        "test_cases:",
+        "  - case_id: ${7:uuid}",
+        "    title: ${8:Название тест-кейса}",
+        "    description: ${9:Описание}",
+        "    priority: ${10|high,medium,low|}",
+        "    steps:",
+        "      - action: ${11:Действие}",
+        "        expected_result: ${12:Ожидаемый результат}"
+      ],
+      "description": "Шаблон для создания нового test suite"
+    },
+    "Test Case": {
+      "prefix": "test-case",
+      "body": [
+        "- case_id: ${1:uuid}",
+        "  title: ${2:Название тест-кейса}",
+        "  description: ${3:Описание}",
+        "  estimatedTime: ${4:2m}",
+        "  priority: ${5|high,medium,low|}",
+        "  tags:",
+        "    - ${6:тег}",
+        "  pre-conditions:",
+        "    - action: ${7:Предусловие}",
+        "      expected_result: ${8:Результат}",
+        "  steps:",
+        "    - action: ${9:Действие}",
+        "      expected_result: ${10:Ожидаемый результат}",
+        "  post-conditions:",
+        "    - action: ${11:Постусловие}",
+        "      expected_result: ${12:Результат}"
+      ],
+      "description": "Полный шаблон тест-кейса"
+    },
+    "Simple Test Case": {
+      "prefix": "simple-case",
+      "body": [
+        "- case_id: ${1:uuid}",
+        "  title: ${2:Название тест-кейса}",
+        "  description: ${3:Описание}",
+        "  priority: ${4|high,medium,low|}",
+        "  steps:",
+        "    - action: ${5:Действие}",
+        "      expected_result: ${6:Ожидаемый результат}"
+      ],
+      "description": "Простой шаблон тест-кейса"
+    },
+    "Test Step": {
+      "prefix": "step",
+      "body": [
+        "- action: ${1:Действие}",
+        "  expected_result: ${2:Ожидаемый результат}"
+      ],
+      "description": "Шаг тест-кейса"
+    },
+    "Pre-condition": {
+      "prefix": "pre-condition",
+      "body": [
+        "pre-conditions:",
+        "  - action: ${1:Предусловие}",
+        "    expected_result: ${2:Результат}"
+      ],
+      "description": "Предусловие тест-кейса"
+    },
+    "Post-condition": {
+      "prefix": "post-condition",
+      "body": [
+        "post-conditions:",
+        "  - action: ${1:Постусловие}",
+        "    expected_result: ${2:Результат}"
+      ],
+      "description": "Постусловие тест-кейса"
+    },
+    "Environment": {
+      "prefix": "environment",
+      "body": [
+        "environment:",
+        "  - name: ${1|Browser,Browser version,OS,OS version|}",
+        "    value: ${2:значение}"
+      ],
+      "description": "Параметры окружения"
+    },
+    "Custom Fields": {
+      "prefix": "custom-fields",
+      "body": [
+        "custom_fields:",
+        "  - name: ${1:Название поля}",
+        "    value: ${2:Значение}"
+      ],
+      "description": "Пользовательские поля"
+    },
+    "Links": {
+      "prefix": "links",
+      "body": [
+        "links:",
+        "  - name: ${1|Bug,Docs,Requirements|}",
+        "    value: ${2:https://example.com}"
+      ],
+      "description": "Ссылки на внешние ресурсы"
+    },
+    "Tags": {
+      "prefix": "tags",
+      "body": [
+        "tags:",
+        "  - ${1:тег1}",
+        "  - ${2:тег2}"
+      ],
+      "description": "Теги для группировки"
+    },
+    "Iterations": {
+      "prefix": "iterations",
+      "body": [
+        "iterations:",
+        "  - iteration_id: \"${1:1}\"",
+        "    params:",
+        "      - name: ${2:Параметр}",
+        "        value: \"${3:Значение}\""
+      ],
+      "description": "Итерации с параметрами"
+    },
+    "Attachments": {
+      "prefix": "attachments",
+      "body": [
+        "attachments:",
+        "  - name: ${1:screenshot.png}",
+        "    type: ${2|image/png,image/jpeg,application/pdf,text/plain|}",
+        "    path: ${3:tests/test-case/attach/screenshot.png}"
+      ],
+      "description": "Вложенные файлы"
+    },
+    "Common Cases": {
+      "prefix": "common-cases",
+      "body": [
+        "common_cases:",
+        "  - case_id: ${1:uuid}",
+        "    name: ${2:Название общего кейса}",
+        "    path: ${3:tests/test-case/common-case/folder/file.yaml}"
+      ],
+      "description": "Ссылки на общие кейсы"
+    },
+    "Common Case Reference": {
+      "prefix": "common-ref",
+      "body": [
+        "- action: <${1:Название общего кейса}>"
+      ],
+      "description": "Ссылка на общий кейс в угловых скобках"
+    },
+    "Step Template": {
+      "prefix": "step-template",
+      "body": [
+        "- action: \"${1:Выполнить действие}\"",
+        "  expected_result: \"${2:Ожидаемый результат}\""
+      ],
+      "description": "Шаблон для вставки шага"
+    },
+    "Precondition Template": {
+      "prefix": "precondition-template",
+      "body": [
+        "pre-conditions:",
+        "  - action: \"${1:Предусловие}\"",
+        "    expected_result: \"${2:Результат предусловия}\""
+      ],
+      "description": "Шаблон для вставки предусловия"
+    },
+    "Postcondition Template": {
+      "prefix": "postcondition-template",
+      "body": [
+        "post-conditions:",
+        "  - action: \"${1:Постусловие}\"",
+        "    expected_result: \"${2:Результат постусловия}\""
+      ],
+      "description": "Шаблон для вставки постусловия"
+    },
+    "Iteration Template": {
+      "prefix": "iteration-template",
+      "body": [
+        "iterations:",
+        "  - iteration_id: \"${1:1}\"",
+        "    params:",
+        "      - name: \"${2:Параметр}\"",
+        "        value: \"${3:Значение}\""
+      ],
+      "description": "Шаблон для вставки итерации"
+    },
+    "Common Case Template": {
+      "prefix": "common-case-template",
+      "body": [
+        "- action: \"<${1:Название общего кейса}>\""
+      ],
+      "description": "Шаблон для вставки ссылки на общий кейс"
+    },
+    "Attachment Template": {
+      "prefix": "attachment-template",
+      "body": [
+        "attachments:",
+        "  - name: \"${1:файл.png}\"",
+        "    type: \"${2:image/png}\"",
+        "    path: \"${3:tests/test-case/attach/файл.png}\""
+      ],
+      "description": "Шаблон для вставки вложения"
+    },
+    "Test Case Short": {
+      "prefix": "tc-short",
+      "body": [
+        "- case_id: ${1:uuid}",
+        "  title: \"${2:Новый тест-кейс}\"",
+        "  priority: ${3|high,medium,low|}",
+        "  steps:",
+        "    - action: \"${4:Выполнить действие}\"",
+        "      expected_result: \"${5:Ожидаемый результат}\""
+      ],
+      "description": "Короткий тест-кейс с минимальными полями"
+    },
+    "Test Case Full": {
+      "prefix": "tc-full",
+      "body": [
+        "- case_id: ${1:uuid}",
+        "  title: \"${2:Новый тест-кейс}\"",
+        "  description: \"${3:Описание тест-кейса}\"",
+        "  estimatedTime: \"${4:5m}\"",
+        "  priority: ${5|high,medium,low|}",
+        "  tags:",
+        "    - ${6:тег1}",
+        "    - ${7:тег2}",
+        "  environment:",
+        "    - name: \"Browser\"",
+        "      value: \"${8:Chrome}\"",
+        "    - name: \"OS\"",
+        "      value: \"${9:Windows}\"",
+        "  custom_fields:",
+        "    - name: \"${10:Исполнитель}\"",
+        "      value: \"${11:Тестировщик}\"",
+        "  links:",
+        "    - name: \"Bug\"",
+        "      value: \"${12:https://example.com/bug-123}\"",
+        "    - name: \"Docs\"",
+        "      value: \"${13:https://example.com/docs}\"",
+        "  pre-conditions:",
+        "    - action: \"${14:Предусловие}\"",
+        "      expected_result: \"${15:Результат предусловия}\"",
+        "  steps:",
+        "    - action: \"${16:Выполнить действие}\"",
+        "      expected_result: \"${17:Ожидаемый результат}\"",
+        "    - action: \"${18:Проверить результат}\"",
+        "      expected_result: \"${19:Результат проверен}\"",
+        "  post-conditions:",
+        "    - action: \"${20:Очистить данные}\"",
+        "      expected_result: \"${21:Данные очищены}\"",
+        "  iterations:",
+        "    - iteration_id: \"1\"",
+        "      params:",
+        "        - name: \"${22:Параметр1}\"",
+        "          value: \"${23:Значение1}\"",
+        "  attachments:",
+        "    - name: \"${24:screenshot.png}\"",
+        "      type: \"${25:image/png}\"",
+        "      path: \"${26:tests/test-case/attach/screenshot.png}\"",
+        "  common_cases:",
+        "    - case_id: \"${27:uuid}\"",
+        "      name: \"${28:Общий кейс}\"",
+        "      path: \"${29:tests/test-case/common-case/example.yaml}\""
+      ],
+      "description": "Полный тест-кейс со всеми возможными полями"
+    }
+  }
+}
