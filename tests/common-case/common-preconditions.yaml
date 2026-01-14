@@ -1,0 +1,18 @@
+suite_id: 143abfd9-e430-4502-937c-f849e50956e0
+suite_name: Предусловия
+description: Основные предусловия для кейсов
+created_at: '2025-12-10T07:50:12Z'
+status: new
+created_by: Александр Соловьев
+test_cases:
+  - case_id: 36c63fcc-acfa-426d-bc79-a849c2b917a7
+    title: Подготовка для отображения виджетов с аналитикой
+    description: Предусловие для проверки аналитики
+    priority: high
+    steps:
+      - action: Создано несколько проектов
+        expected_result: ''
+      - action: В каждом проекте есть активные тест-раны 
+        expected_result: ''
+      - action: В тест-ранах есть установленные результаты разными пользователями
+        expected_result: ''
