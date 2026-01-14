@@ -6,13 +6,13 @@ status: new
 created_by: Александр Соловьев
 test_cases:
   - case_id: 36c63fcc-acfa-426d-bc79-a849c2b917a7
-    title: Подготовка для отображения виджетов с аналитикой
-    description: Предусловие для проверки аналитики
+    title: Авторизован администратор
+    description: Предусловие авторизации администартором
     priority: high
     steps:
-      - action: Создано несколько проектов
+      - action: Открыта страница авторизации
         expected_result: ''
-      - action: В каждом проекте есть активные тест-раны 
+      - action: Ввести логин/пароль - "testadmin"/"testadminpassword"
         expected_result: ''
-      - action: В тест-ранах есть установленные результаты разными пользователями
+      - action: Нажать "Войти"
         expected_result: ''

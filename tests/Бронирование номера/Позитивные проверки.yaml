@@ -33,7 +33,8 @@ test_cases:
       - action: Проскроллить страницу до блока “Номера“
         expected_result: Форма бронирования номера не отображается
     priority: medium
-    tags: []
+    tags:
+      - e2e
 
   - case_id: c6e55398-c133-4649-82b5-e85d8021ee87
     title: Бронирование номера на одну ночь
@@ -71,7 +72,8 @@ test_cases:
       - action: Проскроллить страницу до блока “Номера“
         expected_result: Форма бронирования номера не отображается
     priority: high
-    tags: []
+    tags:
+      - Регресс
 
   - case_id: 6d2f9b0b-7648-41b0-b280-8a42343b7cd7
     title: Переключение календаря на месяц вперед
@@ -95,7 +97,8 @@ test_cases:
       - action: Проскроллить страницу до блока “Номера“
         expected_result: Форма бронирования номера не отображается
     priority: medium
-    tags: []
+    tags:
+      - e2e
 
   - case_id: cb588211-ef4f-4de0-a8c1-678d54f24183
     title: Переключение календаря на месяц назад
@@ -119,7 +122,8 @@ test_cases:
       - action: Проскроллить страницу до блока “Номера“
         expected_result: Форма бронирования номера не отображается
     priority: medium
-    tags: []
+    tags:
+      - e2e
 
   - case_id: ffd96dab-46c5-4b7c-9a04-75fa04299106
     title: Очистка данных при отмене бронирования номера
@@ -158,7 +162,8 @@ test_cases:
       - action: Проскроллить страницу до блока “Номера“
         expected_result: Форма бронирования номера не отображается
     priority: high
-    tags: []
+    tags:
+      - Регресс
 
   - case_id: 5ef644ab-d36d-422c-8302-a88b6bd2f671
     title: Выбор периода бронирования
@@ -194,4 +199,5 @@ test_cases:
       - action: Проскроллить страницу до блока “Номера“
         expected_result: Форма бронирования номера не отображается
     priority: medium
-    tags: []
+    tags:
+      - Регресс

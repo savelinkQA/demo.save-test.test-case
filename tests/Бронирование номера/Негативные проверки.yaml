@@ -9,7 +9,8 @@ test_cases:
     title: Ошибка при отправке бронирования без указания периода
     description: ''
     priority: medium
-    tags: []
+    tags:
+      - Регресс
     estimatedTime: 2m
     custom_fields: []
     links: []
@@ -78,4 +79,5 @@ test_cases:
       - action: Проскроллить страницу до блока “Номера“
         expected_result: Предупреждение не отображается
     priority: medium
-    tags: []
+    tags:
+      - Регресс
