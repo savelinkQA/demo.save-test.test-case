@@ -11,7 +11,7 @@ test_cases:
     priority: medium
     tags:
       - Регресс
-    estimatedTime: 2m
+    estimatedTime: 4m
     custom_fields: []
     links: []
     attachments: []
@@ -45,7 +45,7 @@ test_cases:
   - case_id: 2c43a475-784d-410c-8b22-e40b002d0c08
     title: Ошибка при пересечении периодов бронирования номера
     description: Проверка валидации при попытке забронировать номер на период, который пересекается с уже забронированным периодом. Ожидается возврат ошибки 409 и отображение предупреждения о недоступности номера.
-    estimatedTime: 2m
+    estimatedTime: 5m
     custom_fields: []
     links: []
     attachments: []

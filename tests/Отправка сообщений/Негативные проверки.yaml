@@ -148,7 +148,7 @@ test_cases:
   - case_id: cc8a8cd0-7423-454f-ab98-9fb1d0e9814d
     title: Ошибка при отправке сообщения с e-mail, несоответствующим формату
     description: Проверка валидации формата e-mail при вводе невалидных значений (например, user@.com, user@domain, user@domain..com и др.). Ожидается возврат ошибки 400 и отображение предупреждения о несоответствии формату.
-    estimatedTime: 2m
+    estimatedTime: 6m
     custom_fields: []
     links: []
     attachments: []
@@ -207,7 +207,7 @@ test_cases:
   - case_id: 746a681c-6b4f-4163-98a9-a1c62b3abea6
     title: Ошибка при отправке сообщения с темой >100 символов
     description: Проверка валидации поля "Тема" при вводе значения, превышающего максимально допустимую длину (100 символов). Ожидается возврат ошибки 400 и отображение предупреждения о допустимом диапазоне символов.
-    estimatedTime: 2m
+    estimatedTime: 3m
     custom_fields: []
     links: []
     attachments: []
