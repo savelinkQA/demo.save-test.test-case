@@ -13,7 +13,11 @@ test_cases:
       - Регресс
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-BOOK-VALIDATE-PERIOD
+      - name: Требование
+        value: REQ-BOOK-SUCCESS
     attachments: []
     common_cases: []
     pre-conditions:
@@ -47,7 +51,11 @@ test_cases:
     description: Проверка валидации при попытке забронировать номер на период, который пересекается с уже забронированным периодом. Ожидается возврат ошибки 409 и отображение предупреждения о недоступности номера.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-BOOK-NO-OVERLAP
+      - name: Требование
+        value: REQ-BOOK-PERIOD
     attachments: []
     common_cases: []
     pre-conditions:

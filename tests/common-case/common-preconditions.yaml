@@ -9,6 +9,9 @@ test_cases:
     title: Авторизован администратор
     description: Предусловие авторизации администартором
     priority: high
+    links:
+      - name: Требование
+        value: REQ-AUTH-ADMIN
     steps:
       - action: Открыта страница авторизации
         expected_result: ''

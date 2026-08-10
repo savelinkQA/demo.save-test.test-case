@@ -10,7 +10,9 @@ test_cases:
     description: Проверка корректного отображения иконок Font Awesome для полей формы отправки сообщения (fa-id-card для Имени, fa-envelope для e-mail, fa-phone для Телефона, fa-quote-left для Темы) и отсутствия иконки у поля "Сообщение".
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-MSG-ICONS
     attachments: []
     common_cases: []
     pre-conditions:
@@ -40,7 +42,9 @@ test_cases:
     description: Проверка успешной отправки сообщения с минимально допустимыми значениями всех полей (1 символ для Имени, минимальный e-mail, 11 символов для Телефона, 5 символов для Темы, 20 символов для Сообщения). Ожидается успешная отправка и отображение благодарного текста.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-MSG-SEND
     attachments: []
     common_cases: []
     pre-conditions:
@@ -79,7 +83,9 @@ test_cases:
     description: Проверка успешной отправки сообщения с максимально допустимыми значениями всех полей (255 символов для Имени, максимальный e-mail, 21 символ для Телефона, 100 символов для Темы, 2000 символов для Сообщения). Ожидается успешная отправка и отображение благодарного текста.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-MSG-SEND
     attachments: []
     common_cases: []
     pre-conditions:
@@ -115,7 +121,9 @@ test_cases:
     description: Проверка функциональности ссылки на e-mail в блоке "Отправка сообщения". Ожидается открытие почтового клиента или системного окна выбора почтового клиента при клике на адрес "fake@fakeemail.com".
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-MSG-MAILTO
     attachments: []
     common_cases: []
     pre-conditions:
@@ -136,7 +144,11 @@ test_cases:
     description: Проверка возможности изменения размера поля "Сообщение" путем перетаскивания правого нижнего угла. Ожидается исчезновение вертикального скролл-бара при увеличении размера и полное отображение введенного текста.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-MSG-RESIZE
+      - name: Требование
+        value: GHOST-UI-A11Y
     attachments: []
     common_cases: []
     pre-conditions:

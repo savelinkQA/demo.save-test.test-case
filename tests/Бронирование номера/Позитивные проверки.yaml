@@ -10,7 +10,9 @@ test_cases:
     description: Проверка функциональности кнопки "Сегодня" для возврата календаря к текущему месяцу и выделения текущей даты после переключения на будущие месяцы.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-BOOK-CALENDAR
     attachments: []
     common_cases: []
     pre-conditions:
@@ -41,7 +43,11 @@ test_cases:
     description: Проверка успешного бронирования номера на одну ночь с заполнением всех обязательных полей формы. Ожидается успешная отправка POST запроса и отображение попапа с подтверждением бронирования.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-BOOK-SUCCESS
+      - name: Требование
+        value: REQ-BOOK-PERIOD
     attachments: []
     common_cases: []
     pre-conditions:
@@ -80,7 +86,9 @@ test_cases:
     description: Проверка навигации календаря вперед с помощью кнопки "Вперед". Ожидается корректное отображение следующего месяца в календаре.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-BOOK-CALENDAR
     attachments: []
     common_cases: []
     pre-conditions:
@@ -105,7 +113,9 @@ test_cases:
     description: Проверка навигации календаря назад с помощью кнопки "Назад". Ожидается корректное отображение предыдущего месяца в календаре.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-BOOK-CALENDAR
     attachments: []
     common_cases: []
     pre-conditions:
@@ -130,7 +140,9 @@ test_cases:
     description: Проверка очистки всех заполненных данных формы бронирования при нажатии кнопки "Отмена". Ожидается, что при повторном открытии формы все поля и выбранный период будут пустыми.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-BOOK-CANCEL-CLEAR
     attachments: []
     common_cases: []
     pre-conditions:
@@ -170,7 +182,9 @@ test_cases:
     description: Проверка механизма выбора периода бронирования путем перетаскивания курсора в календаре. Ожидается корректное выделение периода и отображение информации о количестве ночей и стоимости.
     estimatedTime: 2m
     custom_fields: []
-    links: []
+    links:
+      - name: Требование
+        value: REQ-BOOK-PERIOD
     attachments: []
     common_cases: []
     pre-conditions:
